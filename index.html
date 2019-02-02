@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./video-js.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+    <script src="video.min.js"></script>
+    <script src="videojs.framebyframe.js"></script>
+    <title>portable video tool</title>
+</head>
+<body> 
+    <div id="player-container">
+            <video
+                id="leftPlayer"
+                class="video-js vjs-default-skin"
+                controls
+                data-setup='{}'>
+                <source src="https://zippy.gfycat.com/ImmaculateScratchyBustard.webm" type="video/webm">
+            </video>
+            <video
+                id="rightPlayer"
+                class="video-js vjs-default-skin"
+                controls
+                data-setup='{}'>
+                <source src="backflip0.mp4" type="video/mp4">
+            </video>
+    </div>
+</body>
+       <script>
+        var video = videojs("rightPlayer", {
+          controls: true,
+          autoplay: true,
+          preload: 'auto',
+          plugins: {
+            framebyframe: {
+              fps: 23.98,
+              steps: [
+                { text: '-1', step: -1 },
+                { text: '+1', step: 1 },
+              ]
+            }
+          }
+        });
+        var video2 = videojs("leftPlayer", {
+          controls: true,
+          autoplay: true,
+          preload: 'auto',
+          plugins: {
+            framebyframe: {
+              fps: 23.98,
+              steps: [
+                { text: '-1', step: -1 },
+                { text: '+1', step: 1 },
+              ]
+            }
+          }
+        });
+        </script>  
+<script>
+  console.log("test");
+if (document.getElementById("forward")) {
+  console.log("found it ");
+}
+var input = document.getElementById("forward");
+input.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.keyCode === 70) {
+    console.log('f key pressed!');
+    document.getElementById("forward").click();
+  }
+});
+</script>
+</html>

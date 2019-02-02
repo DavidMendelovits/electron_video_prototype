@@ -1,0 +1,23 @@
+{
+  "name": "video_player",
+  "version": "1.0.0",
+  "description": "prototype",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidMendelovits/electron_video_prototype.git"
+  },
+  "author": "Dmendelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidMendelovits/electron_video_prototype/issues"
+  },
+  "homepage": "https://github.com/DavidMendelovits/electron_video_prototype#readme",
+  "devDependencies": {
+    "electron": "^4.0.3"
+  }
+}
